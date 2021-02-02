@@ -5,6 +5,12 @@ for (var row of rows) {
   row.addEventListener("click", handler);
 }
 
+// var winnigarray = [
+//   [0, 1, 2][(3, 4, 5)][(6, 7, 8)][(0, 3, 6)][(1, 4, 7)][(2, 5, 8)][(0, 4, 8)][
+//     (2, 4, 6)
+//   ],
+// ];
+
 var counter = 0;
 function handler() {
   if (this.innerHTML === "") {
@@ -15,10 +21,10 @@ function handler() {
       this.innerHTML = "X";
     }
   }
-  mtx();
+  check();
 }
 
-//! Hardcoded meth
+//! Hardcoded meth example:
 function check() {
   if (
     document.getElementById("td1").innerHTML === "X" &&
@@ -54,20 +60,10 @@ function mtx() {
 
   var matrix = new Array(array1, array2, array3);
 
-  for (var row = 0; row < 3; row++) {
-    for (var col = 0; col < 3; col++) {
-      if (matrix[row][1] === "X") {
-        alert("test");
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
+      if (matrix[i][j] !== "") {
       }
     }
   }
 }
-
-// //! Handling reset button :
-
-// var btn = document.getElementById("btn");
-// row.addEventListener("click", reset);
-
-// function reset() {
-//   document.getElementsByClassName("table").reset();
-// }
