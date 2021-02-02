@@ -30,3 +30,15 @@ th, td {
     
     
   }
+
+  body{
+      text-align: center;
+  }
+
+  #btn {
+    position: relative;
+    
+    
+    width: 100px;
+  }
+
